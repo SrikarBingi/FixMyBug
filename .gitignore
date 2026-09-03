@@ -1,0 +1,23 @@
+# Eclipse
+.metadata/
+RemoteSystemsTempFiles/
+.recommenders/
+
+# Maven
+target/
+
+# IDE
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

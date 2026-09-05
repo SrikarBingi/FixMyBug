@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.devrise.fixmybug.dto.CreateUserRequest;
 import com.devrise.fixmybug.dto.UpdateUserRequest;
 import com.devrise.fixmybug.dto.UserResponse;
+import com.devrise.fixmybug.exception.DuplicateUserException;
 import com.devrise.fixmybug.exception.UserNotFoundException;
 import com.devrise.fixmybug.model.User;
 import com.devrise.fixmybug.repository.UserRepository;
@@ -22,6 +23,14 @@ public class UserService {
     }
     
     public UserResponse createUser(CreateUserRequest request) {
+    	
+    	if (userRepository.existsByUsername(request.getUsername())) {
+            throw new DuplicateUserException("Username already exists");
+        }
+
+        if (userRepository.existsByEmail(request.getEmail())) {
+            throw new DuplicateUserException("Email already exists");
+        }
     	
     	User user = new User();
     	

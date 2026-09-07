@@ -24,4 +24,13 @@ public class GlobalExceptionHandler {
 	            .status(HttpStatus.CONFLICT)
 	            .body(exception.getMessage());
 	}
+	
+	@ExceptionHandler(QuestionNotFoundException.class)
+	public ResponseEntity<String> handleQuestionNotFound(
+	        QuestionNotFoundException exception) {
+
+	    return ResponseEntity
+	            .status(HttpStatus.NOT_FOUND)
+	            .body(exception.getMessage());
+	}
 }

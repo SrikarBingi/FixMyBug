@@ -5,8 +5,10 @@ import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserResponse {
@@ -16,16 +18,16 @@ public class UserResponse {
     private String email;
     private String bio;
     
-	public UserResponse() {
-		super();
-	}
-	public UserResponse(UUID id, String username, String email, String bio) {
-		super();
-		this.id = id;
-		this.username = username;
-		this.email = email;
-		this.bio = bio;
-	}
+//	public UserResponse() {
+//		super();
+//	}
+//	public UserResponse(UUID id, String username, String email, String bio) {
+//		super();
+//		this.id = id;
+//		this.username = username;
+//		this.email = email;
+//		this.bio = bio;
+//	}
 	public UUID getId() {
 		return id;
 	}

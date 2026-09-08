@@ -4,6 +4,8 @@ import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.stereotype.Service;
+
 import com.devrise.fixmybug.dto.AnswerResponse;
 import com.devrise.fixmybug.dto.CreateAnswerRequest;
 import com.devrise.fixmybug.dto.UpdateAnswerRequest;
@@ -15,6 +17,7 @@ import com.devrise.fixmybug.repository.AnswerRepository;
 import com.devrise.fixmybug.repository.QuestionRepository;
 import com.devrise.fixmybug.repository.UserRepository;
 
+@Service
 public class AnswerService {
 	
 	private final AnswerRepository answerRepository;

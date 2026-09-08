@@ -20,7 +20,7 @@ public class Answer {
 	@Column(nullable=false, columnDefinition="TEXT")
 	private String text;
 	
-	@Column(name="question_id", nullable=false)
+	@Column(name="created_at", nullable=false)
 	private OffsetDateTime createdAt;
 	
 	@ManyToOne
